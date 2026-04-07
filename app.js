@@ -35,13 +35,12 @@ var strategy = new Auth0Strategy(
   }
 );
 
+passport.use(strategy);
 
 console.log(
   'ACTIVE Auth0 callback:',
   passport._strategy('auth0')._callbackURL
 );
-
-passport.use(strategy);
 
 // You can use this section to keep a smaller payload
 passport.serializeUser(function (user, done) {
