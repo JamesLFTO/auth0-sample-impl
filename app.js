@@ -14,6 +14,10 @@ var usersRouter = require('./routes/users');
 
 dotenv.config();
 
+
+console.log("AUTH0_DOMAIN loaded:", !!process.env.AUTH0_DOMAIN);
+console.log("CALLBACK:", process.env.AUTH0_CALLBACK_URL);
+
 // Configure Passport to use Auth0
 var strategy = new Auth0Strategy(
   {
@@ -29,11 +33,6 @@ var strategy = new Auth0Strategy(
     return done(null, profile);
   }
 );
-
-
-console.log("AUTH0_DOMAIN loaded:", !!process.env.AUTH0_DOMAIN);
-console.log("CALLBACK:", process.env.AUTH0_CALLBACK_URL);
-
 
 passport.use(strategy);
 
