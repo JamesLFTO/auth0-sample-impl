@@ -30,6 +30,11 @@ var strategy = new Auth0Strategy(
   }
 );
 
+
+console.log("AUTH0_DOMAIN loaded:", !!process.env.AUTH0_DOMAIN);
+console.log("CALLBACK:", process.env.AUTH0_CALLBACK_URL);
+
+
 passport.use(strategy);
 
 // You can use this section to keep a smaller payload
