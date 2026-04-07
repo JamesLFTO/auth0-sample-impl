@@ -28,7 +28,6 @@ router.get('/login', passport.authenticate('auth0', {
 router.get('/login/xchem-federate/', passport.authenticate('auth0', {
   scope: 'openid email profile',
   connection:'xchem-federate',
-  callbackURL: process.env.AUTH0_CALLBACK_URL
 }), function (req, res) {
   res.redirect('/');
 });
@@ -37,7 +36,6 @@ router.get('/login/xchem-federate/', passport.authenticate('auth0', {
 router.get('/login/institution/', passport.authenticate('auth0', {
   scope: 'openid email profile',
   connection:'cirrus',
-  callbackURL: process.env.AUTH0_CALLBACK_URL
 }), function (req, res) {
   res.redirect('/');
 });
