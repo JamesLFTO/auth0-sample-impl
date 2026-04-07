@@ -25,7 +25,7 @@ var strategy = new Auth0Strategy(
     domain: process.env.AUTH0_DOMAIN,
     clientID: process.env.AUTH0_CLIENT_ID,
     clientSecret: process.env.AUTH0_CLIENT_SECRET,
-	callbackURL: 'https://auth0-nodejs-sample-login-f8xpjwubf-jameslftos-projects.vercel.app/callback'
+	callbackURL: process.env.AUTH0_CALLBACK_url||'http://localhost:3000/callback'
   },
   function (accessToken, refreshToken, extraParams, profile, done) {
     // accessToken is the token to call Auth0 API (not needed in the most cases)
@@ -35,6 +35,11 @@ var strategy = new Auth0Strategy(
   }
 );
 
+
+console.log(
+  'ACTIVE Auth0 callback:',
+  passport._strategy('auth0')._callbackURL
+);
 
 passport.use(strategy);
 
