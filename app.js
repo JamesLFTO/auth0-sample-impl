@@ -18,6 +18,8 @@ dotenv.config();
 console.log("AUTH0_DOMAIN loaded:", !!process.env.AUTH0_DOMAIN);
 console.log("CALLBACK:", process.env.AUTH0_CALLBACK_URL);
 
+app.set('trust proxy', true);
+
 // Configure Passport to use Auth0
 var strategy = new Auth0Strategy(
   {

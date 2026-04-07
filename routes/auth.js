@@ -18,7 +18,6 @@ router.use((req, res, next) => {
 // Perform the login, after login Auth0 will redirect to callback
 router.get('/login', passport.authenticate('auth0', {
   scope: 'openid email profile',
-  callbackURL: process.env.AUTH0_CALLBACK_URL
 }), function (req, res) {
   res.redirect('/');
 });
