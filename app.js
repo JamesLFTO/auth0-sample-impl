@@ -93,6 +93,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/milliken-federate', (req, res) => {
+  console.log('milliken-federeate route hit');
   res.render('milliken-federate');
 });
 
