@@ -35,9 +35,7 @@ var strategy = new Auth0Strategy(
   }
 );
 
-passport.use(strategy)=>{console.log("passport is using this callback URL:", this._callbackURL);
-return done (null, profile);
-};
+passport.use(strategy);
 
 console.log(
   'ACTIVE Auth0 callback:',
