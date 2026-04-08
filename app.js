@@ -92,6 +92,17 @@ app.get('/', (req, res) => {
 });
 
 
+app.get('/milliken-federate', (req, res) => {
+  res.render('milliken-federate');
+});
+
+
+app.get('/xchem-federate', (req, res) => {
+  res.render('xchem-federate');
+});
+
+
+
 app.use(session(sess));
 
 app.use(passport.initialize());
