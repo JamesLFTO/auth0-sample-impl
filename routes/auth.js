@@ -39,6 +39,13 @@ router.get('/login/milliken-and-federate/', passport.authenticate('auth0', {
   res.redirect('/');
 });
 
+router.get('/login/elsevier-federate/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'elsevier-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
 // Institutional Login (Cirrus)
 router.get('/login/institution/', passport.authenticate('auth0', {
   scope: 'openid email profile',
