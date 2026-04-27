@@ -69,6 +69,13 @@ router.get('/login/acsfederate/', passport.authenticate('auth0', {
   res.redirect('/');
 });
 
+router.get('/login/mettler-toledo-autochem-federate/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'mettler-toledo-autochem-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
 // Bilateral Login (x-chem)
 
 // Perform the final stage of authentication and redirect to previously requested URL or '/user'
@@ -84,6 +91,7 @@ router.get('/callback', function (req, res, next) {
     });
   })(req, res, next);
 });
+
 
 // Perform session logout and redirect to homepage
 /*router.get('/logout', (req, res) => {
