@@ -76,6 +76,13 @@ router.get('/login/mettler-toledo-autochem-federate/', passport.authenticate('au
   res.redirect('/');
 });
 
+router.get('/login/bp-corporation-north-america-federate/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'bp-corporation-north-america-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
 // Bilateral Login (x-chem)
 
 // Perform the final stage of authentication and redirect to previously requested URL or '/user'
