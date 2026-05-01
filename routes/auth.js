@@ -91,6 +91,13 @@ router.get('/login/bp-corporation-north-america-federate/', passport.authenticat
   res.redirect('/');
 });
 
+router.get('/login/environmental-defense-fund-federate/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'environmental-defense-fund-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
 // Bilateral Login (x-chem)
 
 // Perform the final stage of authentication and redirect to previously requested URL or '/user'
