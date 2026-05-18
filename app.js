@@ -102,7 +102,7 @@ app.get('/xchem-federate', (req, res) => {
   res.render('xchem-federate');
 });
 
-app.get('/axcelead-tokyo-west-partners-federate', (req, res) => {
+app.get('/axcelead-tokyo', (req, res) => {
   res.render('axcelead-tokyo-west-partners-federate');
 });
 
