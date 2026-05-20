@@ -105,6 +105,13 @@ router.get('/login/environmental-defense-fund-federate/', passport.authenticate(
   res.redirect('/');
 });
 
+router.get('/login/ptc-therapeutics/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'ptc-therapeutics-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
 // Bilateral Login (x-chem)
 
 // Perform the final stage of authentication and redirect to previously requested URL or '/user'

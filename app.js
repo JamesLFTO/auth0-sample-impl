@@ -107,6 +107,10 @@ app.get('/axcelead-tokyo', (req, res) => {
 });
 
 
+app.get('/ptc-therapeutics', (req, res) => {
+  res.render('ptc-therapeutics');
+});
+
 app.use(session(sess));
 
 app.use(passport.initialize());
