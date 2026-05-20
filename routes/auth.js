@@ -112,6 +112,13 @@ router.get('/login/ptc-therapeutics/', passport.authenticate('auth0', {
   res.redirect('/');
 });
 
+router.get('/login/arcus-biosciences/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'arcus-biosciences-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
 // Bilateral Login (x-chem)
 
 // Perform the final stage of authentication and redirect to previously requested URL or '/user'
