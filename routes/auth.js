@@ -126,6 +126,14 @@ router.get('/login/ideaya-biosciences/', passport.authenticate('auth0', {
   res.redirect('/');
 });
 
+router.get('/login/arrowhead-pharmaceuticals/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'arrowhead-pharmaceuticals-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
+
 // Bilateral Login (x-chem)
 
 // Perform the final stage of authentication and redirect to previously requested URL or '/user'
