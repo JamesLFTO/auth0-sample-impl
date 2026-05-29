@@ -133,6 +133,14 @@ router.get('/login/arrowhead-pharmaceuticals/', passport.authenticate('auth0', {
   res.redirect('/');
 });
 
+router.get('/login/huntsman-advanced-techlgy/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'huntsman-advanced-techlgy-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
+
 
 // Bilateral Login (x-chem)
 
