@@ -132,6 +132,14 @@ router.get('/login/arcus-biosciences/', passport.authenticate('auth0', {
   res.redirect('/');
 });
 
+//Roivant sciences
+router.get('/login/roivant-sciences/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'roivant-sciences-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
 router.get('/login/ideaya-biosciences/', passport.authenticate('auth0', {
   scope: 'openid email profile',
   connection:'ideaya-biosciences-federate',
@@ -152,8 +160,6 @@ router.get('/login/huntsman-advanced-techlgy/', passport.authenticate('auth0', {
 }), function (req, res) {
   res.redirect('/');
 });
-
-
 
 // Bilateral Login (x-chem)
 
