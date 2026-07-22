@@ -39,6 +39,14 @@ router.get('/login/xchem-federate/', passport.authenticate('auth0', {
   res.redirect('/');
 });
 
+//asms federate
+router.get('/login/am-mass-spectrometry-federate/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'am-mass-spectrometry-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
 router.get('/login/olema-oncology/', passport.authenticate('auth0', {
   scope: 'openid email profile',
   connection:'olema-oncology-federate',
