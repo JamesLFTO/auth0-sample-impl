@@ -1,0 +1,56 @@
+{
+    "options": {
+        "metadataUrl":"https://login.microsoftonline.com/1aa3f197-39d5-4269-bcea-93372aa086d9/federationmetadata/2007-06/federationmetadata.xml?appid=e970b339-1556-4ed8-9534-5be2d3f04ac9",
+        "cert": "-----BEGIN CERTIFICATE-----\nMIIC8DCCAdigAwIBAgIQHqpn/jJAp7dGadn8EV7Y2TANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNjA0MjgxMDI0NTFaFw0yOTA0MjgxMDI0NTBaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmdFhb3fGRuhKmnqvqStqXN9Zrzp79up3nabgxWUiefoKT4Abn+BOBTvLqhZtp84NiVeZCvZ1PVZZ9FY9GVOwEJzOtlPMeYZ/Z/bIyuQyN+HCmrCLvXBopB45mpHy8O9LF92h5E5sA2f4o8s296ViHnZCXy71vW6Bsk1CnVLF0lUu9BihG4Nwjx7zG1TO8+HOl67aVaDFQGKH/rGcOKegZ+72Q41b3TNXnkbrOfMjlxdx/QpRElEtbXvsma3zsgtjVA5EGCx5MctgjzWpx/fxDcO9fCaMiJS0XLgi7wc7j6rz4nEOWGKWzDBZ3mUkSd7gZARO/3iXhj6bh7/EsDFN4QIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBYqC22VIKM5oFU+C2XcyvO049AK7mCeRIRtAkRSTwDguaoFc17VWkkOYVh35XdSPvBsXqE4I11sLBM8xNaLvapWAuQ1Cph8WhWNhZqnh3IO9Nhwa5BkWNoNHJ1FirA91cQWBeDU8k8WeYvbmByfTgCIPpsNL0we9afb2YXYMGmQnSSicTS0c77QtPkLoF8ZEFFodwcBNKzFWE0uUH4/f2DYBJIi3tJRZvNRqd1fGnBGlr2WgKNilvDGML8jEgPCePk2ggqX5K4mSDi//mOFpxrZFYEUKtbuUJ1pf1cTQab4BU/PJSuYWX8s+GMlTpoxEm2P3s3DlRmLE6/2tRWlK4O\n-----END CERTIFICATE-----",
+        "expires": "2029-04-28T10:24:50.000Z",
+        "subject": {
+            "commonName": "Microsoft Azure Federated SSO Certificate"
+        },
+        "fieldsMap": {
+            "email": "emailaddress",
+            "given_name": "givenname",
+            "family_name": "surname"
+        },
+        "disableSignout": false,
+        "signInEndpoint": "https://login.microsoftonline.com/1aa3f197-39d5-4269-bcea-93372aa086d9/saml2",
+        "digestAlgorithm": "sha256",
+        "protocolBinding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
+        "signOutEndpoint": "https://login.microsoftonline.com/1aa3f197-39d5-4269-bcea-93372aa086d9/saml2",
+        "signSAMLRequest": true,
+        "signatureAlgorithm": "rsa-sha256"
+    },
+    "strategy": "samlp",
+    "name": "grunenthal-gmbh-federate",
+    "provisioning_ticket_url": "https://acs-dev1.us.auth0.com/p/samlp/0Gjkcx4B",
+    "is_domain_connection": false,
+    "show_as_button": false,
+    "authentication": {
+        "active": true
+    },
+    "connected_accounts": {
+        "active": false
+    },
+    "enabled_clients": [
+        "WYloqE8EQiBGVi9EX43e8uSfFt81d6DB",
+        "04uk64p1BrSa88QtE3rHOEgCf8XYMVp3",
+        "32tGPHrE2TnWqZux1yGHxppAdtYqEro8",
+        "6r9OMC2XVRDOKQclJdjgkrDcvc7hkvK7",
+        "6X75vYAOHL7pDzHKWIHeBGabofMj3mNY",
+        "Atk7NdwUnZr4ViTpYASiMSTXVcRWccOx",
+        "BhwUPHwYofLPINcxD7UbxjXdYZRLF4dl",
+        "bXCVaVRotKj4jMkZSGX8nD5uUJRB0qow",
+        "d3dQ54fhlD6LFpLdcsyboKXRH9YqG0Vy",
+        "DBqsHqNptQnXKfkdFsUcVedpdVN6L6AX",
+        "ItQvCFCzW3c4B8y0aWZsqMSmGPKHh9HM",
+        "jl8PxONvO9fIur9P7Vr0QzAa6NkNVH0F",
+        "JWDL1qiOF6IQxAeDdIaEsMNPJACYOw2U",
+        "L7FpvqHiom4S9SibrNIo5Ik55IpCybW6",
+        "RftUSFcBupRcnVMgOegx90yqov1PfvmN",
+        "v4yZQJxHtd2ZNOIBx4xcEGMZUGXbSM7w",
+        "wrTQB2fZDgSC5lyFJgf78Du5rWhq1ovB",
+        "wWIBHiPe4GYkhWYY1IBzoFDhD7WIDUoG"
+    ],
+    "realms": [
+        "grunenthal-gmbh-federate"
+    ]
+}

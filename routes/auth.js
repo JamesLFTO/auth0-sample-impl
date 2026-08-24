@@ -32,6 +32,14 @@ router.get('/login/acs-test-institution-federate/', passport.authenticate('auth0
   res.redirect('/');
 });
 
+//for acs okta test connection
+router.get('/login/acs-okta-federate/', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+  connection:'acs-okta-federate',
+}), function (req, res) {
+  res.redirect('/');
+});
+
 router.get('/login/xchem-federate/', passport.authenticate('auth0', {
   scope: 'openid email profile',
   connection:'xchem-federate',
@@ -227,9 +235,9 @@ router.get('/logout', (req, res, next) => {
 		console.log('Logout route triggered,', returnTo);
   const port = req.connection.localPort;
   console.log('Logout port,', port);
-  if (port !== undefined && port !== 80 && port !== 443 && port!= 3000) {
-    returnTo += ':' + port;
-  }
+  //if (port !== undefined && port !== 80 && port !== 443 && port!= 3000) {
+   // returnTo += ':' + port;
+ // }
 	  console.log('Logout return to ', returnTo);
       const logoutURL = `https://${process.env.AUTH0_DOMAIN}/v2/logout?client_id=${process.env.AUTH0_CLIENT_ID}&returnTo=${returnTo}`;
       
